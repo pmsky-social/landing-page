@@ -4,8 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const description =
-  "pmsky is a platform that enables peer-moderation on Bluesky.";
+const description = "enabling peer moderation on bsky";
+import linkCard from "/src/images/link_card.jpg";
 ---
 
 <!doctype html>
@@ -21,6 +21,8 @@ const description =
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
     />
+    <meta property="og:image" content={linkCard.src} />
+    <meta name="twitter:image" content={linkCard.src} />
   </head>
   <body>
     <slot />
