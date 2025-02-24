@@ -7,4 +7,9 @@ export default defineConfig({
     "/app": "//app.pmsky.social",
     "/bsky": "//bsky.app/profile/pmsky.social",
   },
+  vite: {
+    server: {
+      allowedHosts: true,
+    },
+  },
 });

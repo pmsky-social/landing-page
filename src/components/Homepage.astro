@@ -1,18 +1,10 @@
 ---
 import Card from "./Card.astro";
 import About from "./About.astro";
+import PmskyHeader from "./PmskyHeader.astro";
 ---
 
-<header>
-  <h1>Welcome to <i>Afternoon<span class="blue">Sky</span></i></h1>
-  <p>
-    <i
-      >enabling <b
-        ><span class="blue">p</span>eer <span class="blue">m</span>oderation</b
-      > on bsky
-    </i>
-  </p>
-</header>
+<PmskyHeader />
 
 <main class="homepage">
   <div id="learnmore">
@@ -32,44 +24,3 @@ import About from "./About.astro";
     />
   </ul>
 </main>
-
-<style>
-  header {
-    padding-bottom: 1em;
-  }
-  main.homepage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-y: scroll;
-  }
-
-  .blue {
-    color: var(--nc-lk-2);
-  }
-  @media (prefers-color-scheme: dark) {
-    .blue {
-      color: #7cb8ff;
-    }
-  }
-
-  .link-card-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 1em 0;
-    margin-bottom: 20vh;
-  }
-
-  @media screen and (min-width: 400px) {
-    header {
-      padding-bottom: 2em;
-    }
-    .link-card-grid {
-      flex-direction: row;
-      margin-bottom: 10vh;
-    }
-  }
-</style>
