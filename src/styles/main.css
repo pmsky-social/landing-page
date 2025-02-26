@@ -1,0 +1,41 @@
+header {
+    padding-bottom: 1em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.blue {
+    color: var(--nc-lk-2);
+}
+
+@media (prefers-color-scheme: dark) {
+    .blue {
+        color: #7cb8ff;
+    }
+}
+
+.link-card-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 1em 0;
+    margin-bottom: 20vh;
+}
+
+@media screen and (min-width: 400px) {
+    header {
+        padding-bottom: 2em;
+    }
+
+    .link-card-grid {
+        flex-direction: row;
+        margin-bottom: 10vh;
+    }
+}

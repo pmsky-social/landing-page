@@ -1,0 +1,12 @@
+---
+import PmskyHeader from "../components/PmskyHeader.astro";
+import Layout from "./Layout.astro";
+import "../styles/blogpost.css";
+---
+
+<Layout title="pmsky | blog">
+  <PmskyHeader />
+  <main class="blogpost">
+    <slot />
+  </main>
+</Layout>
