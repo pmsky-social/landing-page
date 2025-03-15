@@ -12,14 +12,14 @@ tags: ["launch", "pmsky.social", "peer moderation", "bsky", "atproto"]
 ## We're live!
 The main voting platform for pmsky is now live, at [app.pmsky.social](https://app.pmsky.social)!
 
-The source code is also available on the organization's GitHub [here](https://github.com/afternoonsky/app).  We'd love any feedback you have, and you can submit them as GitHub issues, emails, Bluesky DMs, or the form linked in the docs [here](https://docs.pmsky.social/getting-started/provide-feedback).
+The source code is also available on the organization's GitHub [here](https://github.com/pmsky-social/app).  We'd love any feedback you have, and you can submit them as GitHub issues, emails, Bluesky DMs, or the form linked in the docs [here](https://docs.pmsky.social/getting-started/provide-feedback).
 
 ### Check out the app!  
-You can currently propose a label, of which there are [three allowed](https://github.com/AfternoonSky/app/blob/cba37c716d5dc99527f23cf3627b2918d91873fa/src/routes/proposals.ts#L7): `wholesome`, `helpful`, and `banger`.  In the future, you'll also be able to help decide which additional labels can be proposed on posts via a "meta-proposal" to allow a new label.  
+You can currently propose a label, of which there are [three allowed](https://github.com/pmsky-social/app/blob/cba37c716d5dc99527f23cf3627b2918d91873fa/src/routes/proposals.ts#L7): `wholesome`, `helpful`, and `banger`.  In the future, you'll also be able to help decide which additional labels can be proposed on posts via a "meta-proposal" to allow a new label.  
 
 So far, the only meta-proposal enabled is whitelisting users.  This means you're able to invite other users by proposing they be whitelisted, and then upvoting that proposal.  
 
-Logging into the app is restricted to "whitelisted" users ([code](https://github.com/AfternoonSky/app/blob/cba37c716d5dc99527f23cf3627b2918d91873fa/src/routes/login.ts#L69)).  A user is whitelisted if the proposal to whitelist them has a positive score (i.e. more upvotes than downvotes) ([code](https://github.com/AfternoonSky/app/blob/cba37c716d5dc99527f23cf3627b2918d91873fa/src/db/repos/allowedUsersRepository.ts#L9)).  
+Logging into the app is restricted to "whitelisted" users ([code](https://github.com/pmsky-social/app/blob/cba37c716d5dc99527f23cf3627b2918d91873fa/src/routes/login.ts#L69)).  A user is whitelisted if the proposal to whitelist them has a positive score (i.e. more upvotes than downvotes) ([code](https://github.com/pmsky-social/app/blob/cba37c716d5dc99527f23cf3627b2918d91873fa/src/db/repos/allowedUsersRepository.ts#L9)).  
 
 If you aren't on the whitelist yet, you can request access [here](https://docs.pmsky.social/getting-started/request-access), or you can ask an existing user to propose whitelisting you!
 
