@@ -1,20 +1,63 @@
+---
+import GithubIcon from "@astropub/icons/GitHubLogo";
+---
+
 <header>
-  <a href="/" class="no-decoration">
-    <h1>Welcome to <i><span class="blue">PM</span>sky</i></h1>
-    <p>
-      <i
-        >enabling <b
-          ><span class="blue">p</span>eer <span class="blue">m</span
-          >oderation</b
-        > on bsky
-      </i>
-    </p>
-  </a>
+  <div class="logo">
+    <a href="/" class="no-decoration">
+      <h1>Welcome to <i><span class="blue">PM</span>sky</i></h1>
+      <p>
+        <i
+          >enabling <b
+            ><span class="blue">p</span>eer <span class="blue">m</span
+            >oderation</b
+          > on bsky
+        </i>
+      </p>
+    </a>
+  </div>
+  <div class="links">
+    <a href="/about">About</a>
+    <a href="/blog">Blog</a>
+    <a href="/docs">Docs</a>
+    <a class="app" href="https://app.pmsky.social">App</a>
+    <a href="https://github.com/pmsky-social/app"><GithubIcon size="1.5em" /></a
+    >
+  </div>
 </header>
 
 <style>
   a.no-decoration {
     text-decoration: none;
     color: inherit;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .links {
+    display: flex;
+  }
+  header .links a {
+    color: var(--nc-tx-1);
+    text-decoration: none;
+    padding: 0.5em 1.2em;
+    display: flex;
+    align-self: center;
+  }
+
+  header .links a.app {
+    border: 1px solid var(--nc-tx-2);
+    border-radius: 8px;
+    background-color: var(--nc-tx-2);
+    color: var(--nc-bg-1);
+  }
+
+  @media screen and (max-width: 750px) {
+    header .links {
+      display: none;
+    }
   }
 </style>

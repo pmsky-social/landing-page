@@ -49,18 +49,3 @@ import "../styles/main.css";
       monospace;
   }
 </style>
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    const href = anchor.getAttribute("href");
-    if (href !== null) {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        document.querySelector(href)?.scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    }
-  });
-</script>
