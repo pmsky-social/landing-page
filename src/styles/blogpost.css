@@ -1,7 +1,8 @@
 @media screen and (min-width: 800px) {
     main.blogpost {
-        width: 40vw;
+        width: 55vw;
         min-width: 400px;
+        max-width: 625px;
         margin: auto;
     }
 }

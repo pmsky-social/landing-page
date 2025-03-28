@@ -11,7 +11,11 @@ import "../../styles/main.css";
       {
         posts.map((post) => (
           <li>
-            <a href={post.url}>{post.frontmatter.title}</a>
+            <a href={post.url}>
+              <h3>{post.frontmatter.title}</h3>
+              <p>{post.frontmatter.description}</p>
+              <p class="date">{post.frontmatter.pubDate.slice(0, 10)}</p>
+            </a>
           </li>
         ))
       }
@@ -29,5 +33,16 @@ import "../../styles/main.css";
     border-left: 1px solid var(--nc-tx-2);
     padding: 0.25em 1em;
     margin-bottom: 0.8em;
+  }
+  ul.posts li a h3 {
+    text-decoration: underline;
+  }
+  ul.posts li a {
+    color: var(--nc-tx-2);
+    text-decoration: none;
+  }
+  ul.posts li a .date {
+    font-size: 80%;
+    color: var(--nc-ac-tx);
   }
 </style>

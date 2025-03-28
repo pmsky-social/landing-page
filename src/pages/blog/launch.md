@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/Blogpost.astro'
-title: 'Launching app.pmsky.social'
+title: 'The App is Live!'
 pubDate: 2025-02-23
 description: 'Announcing the launch of the PMsky platform'
 author: '@drewmca.dev'
