@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--nc-bg-3) 1px 0 7px;
+}
+
+header .links {
+    display: flex;
+}
+
+header .links button.expand {
+    display: none;
+}
+
+
+header .links a {
+    color: var(--nc-tx-1);
+    padding: 0.5em 1.2em;
+    display: flex;
+    align-self: center;
+}
+
+header .links a.app {
+    border: 1px solid var(--nc-tx-2);
+    border-radius: 8px;
+    background-color: var(--nc-tx-2);
+    color: var(--nc-bg-1);
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a.active {
+    text-decoration: underline;
+    color: inherit;
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    header .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .links.expanded {
+        display: flex;
+    }
+
+    header .links button.expand {
+        display: flex;
+    }
+}

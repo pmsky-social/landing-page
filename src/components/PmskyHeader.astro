@@ -1,20 +1,35 @@
-<header>
-  <a href="/" class="no-decoration">
-    <h1>Welcome to <i><span class="blue">PM</span>sky</i></h1>
-    <p>
-      <i
-        >enabling <b
-          ><span class="blue">p</span>eer <span class="blue">m</span
-          >oderation</b
-        > on bsky
-      </i>
-    </p>
-  </a>
-</header>
+---
+interface Props {
+  page?: string | undefined;
+}
+const { page } = Astro.props;
+import HeaderLink from "./HeaderLink.astro";
+import "../styles/header.css";
+---
 
-<style>
-  a.no-decoration {
-    text-decoration: none;
-    color: inherit;
-  }
-</style>
+<header>
+  <div class="logo">
+    <a href="/" class="no-decoration">
+      <h1>Welcome to <i><span class="blue">PM</span>sky</i></h1>
+      <p>
+        <i
+          >enabling <b
+            ><span class="blue">p</span>eer <span class="blue">m</span
+            >oderation</b
+          > on bsky
+        </i>
+      </p>
+    </a>
+  </div>
+  <div class="links">
+    <HeaderLink name="About" href="/about" page={page} />
+    <HeaderLink name="Blog" href="/blog" page={page} />
+    <HeaderLink name="Docs" href="//docs.pmsky.social" page={page} />
+    <HeaderLink name="App" href="//app.pmsky.social" page={page} />
+    <HeaderLink
+      name="GitHub"
+      href="https://github.com/pmsky-social"
+      page={page}
+    />
+  </div>
+</header>

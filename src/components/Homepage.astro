@@ -1,26 +1,132 @@
 ---
-import Card from "./Card.astro";
-import About from "./About.astro";
-import PmskyHeader from "./PmskyHeader.astro";
+import { Image } from "astro:assets";
+import Hero from "./Hero.astro";
+import bricks from "../images/bricks.png";
+import assemblyLine from "../images/assembly-line.png";
+import brickGraph from "../images/brick graph.png";
 ---
 
-<PmskyHeader />
-
 <main class="homepage">
-  <div id="learnmore">
-    <About />
+  <Hero />
+  <div class="row">
+    <div class="col">
+      <h3>Composable Moderation</h3>
+      <Image src={bricks} alt="digital drawing of bricks" />
+      <p>
+        Bluesky has taken a <a
+          href="https://bsky.social/about/blog/03-12-2024-stackable-moderation"
+          >stackable approach to moderation</a
+        >. This means that, in addition to the company's own moderation, anyone
+        can run a labeler and provide an additional layer of protection.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Lowering Barriers</h3>
+      <p>
+        Running your own labeler takes technical expertise. But on <i>PMsky</i>,
+        you can vote on proposals with a tap.
+      </p>
+      <Image
+        src={assemblyLine}
+        alt="digital drawing of three people passing bricks down an assembly line"
+      />
+      <p>
+        <i>PMsky</i> aims to take the concept of composable moderation a step further,
+        allowing anyone to contribute their perspective to be used by those 3rd party
+        labelers. See more on <a
+          href="https://docs.pmsky.social/getting-started/why-peer-moderation"
+          >Why Peer Moderation.</a
+        >
+      </p>
+    </div>
+    <div class="col">
+      <h3>Proposals & Voting</h3>
+      <p>
+        Proposals and votes are published as ATproto records, allowing
+        independent labelers to leverage a wide range of perspectives when
+        deciding which posts to label.
+      </p>
+      <p>
+        On <i>PMsky</i>, anyone can propose a label for a given post, and
+        everyone can vote on those proposals. Labelers then can publish the
+        labels that users propose back to Bluesky.
+        <a href="https://docs.pmsky.social/getting-started/how-it-works"
+          >Learn how it works.</a
+        >
+      </p>
+      <Image
+        src={brickGraph}
+        alt="digital drawing of four bricks with arrows pointing to each other, representing interconnected references in ATprotocol records."
+      />
+    </div>
+    <div class="col sep"></div>
+    <div class="col">
+      <h3>Participate now!</h3>
+      <p>
+        The platform is currently live. You can propose labels and vote as soon
+        as you're whitelisted. <a
+          href="https://docs.pmsky.social/getting-started/request-access"
+          >Learn how to request access</a
+        >.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Learn more & Shape the Platform</h3>
+      <p>
+        Dive into the <a href="//docs.pmsky.social">documentation</a> to learn more
+        about PMsky.
+      </p>
+      <p>
+        <a href="https://docs.pmsky.social/getting-started/provide-feedback"
+          >Reach out</a
+        > with any thoughts, questions, or suggestions to help shape the future of
+        the platform.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Get Involved</h3>
+      <p>
+        The PMsky <a href="https://docs.pmsky.social/tech/lexicon">lexicon</a> has
+        been published and records can be consumed from the firehose.
+      </p>
+      <p>
+        Developers wanting to incorporate this data into feeds and labelers are
+        encouraged to reach out directly!
+      </p>
+    </div>
   </div>
-  <ul role="list" class="link-card-grid">
-    <Card
-      href="//docs.pmsky.social"
-      title="Learn More"
-      body="Read the docs for PMsky."
-    />
-    <!-- href="//app.pmsky.social" -->
-    <Card
-      href="https://app.pmsky.social"
-      title="Check out the app!"
-      body="Still in beta; request access!"
-    />
-  </ul>
 </main>
+
+<style>
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .col {
+    text-align: justify;
+  }
+  .col.sep {
+    width: 100%;
+    border: 1px solid var(--nc-bg-3);
+    margin-bottom: 1em;
+    border-radius: 3px;
+  }
+  img {
+    height: auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .row {
+      padding: 0 2em;
+      margin: 2em 0;
+    }
+    .col {
+      max-width: 30%;
+    }
+    .col.sep {
+      max-width: 100%;
+    }
+  }
+</style>

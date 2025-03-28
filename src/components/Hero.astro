@@ -1,0 +1,63 @@
+---
+import { Picture } from "astro:assets";
+import HeroImage from "../images/hero.jpeg";
+---
+
+<div class="hero">
+  <Picture
+    src={HeroImage}
+    alt="hero image of starling murmuration.  image by bios48 on stock.adobe.com"
+  />
+  <div class="col">
+    <h1>Participatory moderation in the atmosphere</h1>
+    <p>The internet was built to distribute power, not concentrate it.</p>
+    <p>The social media giants have complete control of your feed.</p>
+    <p>
+      Bluesky introduced <a
+        href="https://bsky.social/about/blog/3-30-2023-algorithmic-choice"
+        >algorithmic choice</a
+      > and <a href="https://bsky.social/about/blog/4-13-2023-moderation"
+        >composable moderation</a
+      > to combat that.
+    </p>
+    <p>
+      PMsky provides a new layer that invites everyone to contribute to shaping
+      the social web.
+    </p>
+  </div>
+</div>
+
+<style>
+  .hero {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero picture {
+    width: 100%;
+    padding-right: 2vw;
+  }
+  .hero img {
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--nc-bg-3) 0 0 7px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    margin-bottom: 0.4em;
+  }
+  @media screen and (min-width: 750px) {
+    .hero {
+      flex-direction: row;
+    }
+    .hero picture {
+      width: 180%;
+    }
+  }
+</style>

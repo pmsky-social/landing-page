@@ -1,12 +1,15 @@
 ---
 interface Props {
-  title: string;
+  page?: string;
 }
 
-const { title } = Astro.props;
+const { page } = Astro.props;
+const title = page ? `pmsky | ${page}` : "pmsky";
 const description = "enabling peer moderation on bsky";
 import linkCard from "/src/images/link_card.jpg";
 import "../styles/main.css";
+import PmskyHeader from "../components/PmskyHeader.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -26,7 +29,9 @@ import "../styles/main.css";
     <meta name="twitter:image" content={linkCard.src} />
   </head>
   <body>
+    <PmskyHeader page={page} />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -49,18 +54,3 @@ import "../styles/main.css";
       monospace;
   }
 </style>
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    const href = anchor.getAttribute("href");
-    if (href !== null) {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        document.querySelector(href)?.scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    }
-  });
-</script>

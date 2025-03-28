@@ -1,5 +1,16 @@
+body {
+    max-width: 1200px;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-bottom: 0;
+}
+
 header {
     padding-bottom: 1em;
+    padding-left: max(2em, calc(40vw - 50%));
+    padding-right: max(1em, calc(40vw - 50%));
 }
 
 main {
@@ -7,6 +18,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .blue {
