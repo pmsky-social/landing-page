@@ -43,10 +43,12 @@ a.active {
     header {
         justify-content: center;
         text-align: center;
+        flex-wrap: wrap;
     }
 
     header .links {
-        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     header .links.expanded {
