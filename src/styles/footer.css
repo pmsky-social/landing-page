@@ -14,7 +14,11 @@ footer .col {
 }
 
 footer a {
-    text-decoration: underline;
+    color: var(--nc-ac-tx);
+}
+
+footer a:hover {
+    color: var(--nc-tx-1);
 }
 
 @media screen and (min-width: 750px) {}
