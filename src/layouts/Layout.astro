@@ -1,13 +1,15 @@
 ---
 interface Props {
-  title: string;
+  page?: string;
 }
 
-const { title } = Astro.props;
+const { page } = Astro.props;
+const title = page ? `pmsky | ${page}` : "pmsky";
 const description = "enabling peer moderation on bsky";
 import linkCard from "/src/images/link_card.jpg";
 import "../styles/main.css";
 import PmskyHeader from "../components/PmskyHeader.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -27,8 +29,9 @@ import PmskyHeader from "../components/PmskyHeader.astro";
     <meta name="twitter:image" content={linkCard.src} />
   </head>
   <body>
-    <PmskyHeader />
+    <PmskyHeader page={page} />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>

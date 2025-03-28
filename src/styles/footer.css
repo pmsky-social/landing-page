@@ -1,0 +1,20 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    font-size: 80%;
+    background-color: var(--nc-bg-2);
+    padding: 5em;
+    border-radius: 10px 10px 0 0;
+    box-shadow: inset var(--nc-bg-3) 0 2px 3px 0;
+}
+
+footer .col {
+    width: 150px;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 750px) {}

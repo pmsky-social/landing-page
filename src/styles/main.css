@@ -1,5 +1,10 @@
 body {
     max-width: 1200px;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-bottom: 0;
 }
 
 header {

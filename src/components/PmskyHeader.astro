@@ -1,5 +1,10 @@
 ---
-import GithubIcon from "@astropub/icons/GitHubLogo";
+interface Props {
+  page?: string | undefined;
+}
+const { page } = Astro.props;
+import HeaderLink from "./HeaderLink.astro";
+import "../styles/header.css";
 ---
 
 <header>
@@ -17,62 +22,14 @@ import GithubIcon from "@astropub/icons/GitHubLogo";
     </a>
   </div>
   <div class="links">
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <a href="docs.pmsky.social">Docs</a>
-    <a class="app" href="https://app.pmsky.social">App</a>
-    <a href="https://github.com/pmsky-social/app"><GithubIcon size="1.5em" /></a
-    >
+    <HeaderLink name="About" href="/about" page={page} />
+    <HeaderLink name="Blog" href="/blog" page={page} />
+    <HeaderLink name="Docs" href="//docs.pmsky.social" page={page} />
+    <HeaderLink name="App" href="//app.pmsky.social" page={page} />
+    <HeaderLink
+      name="GitHub"
+      href="https://github.com/pmsky-social"
+      page={page}
+    />
   </div>
 </header>
-
-<style>
-  a.no-decoration {
-    text-decoration: none;
-    color: inherit;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header .links {
-    display: flex;
-  }
-  header .links a {
-    color: var(--nc-tx-1);
-    text-decoration: none;
-    padding: 0.5em 1.2em;
-    display: flex;
-    align-self: center;
-  }
-
-  header .links a.app {
-    border: 1px solid var(--nc-tx-2);
-    border-radius: 8px;
-    background-color: var(--nc-tx-2);
-    color: var(--nc-bg-1);
-  }
-
-  header .links button.expand {
-    display: none;
-  }
-
-  @media screen and (max-width: 750px) {
-    header {
-      justify-content: center;
-      text-align: center;
-    }
-    header .links {
-      display: none;
-    }
-    header .links.expanded {
-      display: flex;
-    }
-
-    header .links button.expand {
-      display: flex;
-    }
-  }
-</style>

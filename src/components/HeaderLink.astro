@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  href: string;
+  page?: string | undefined;
+}
+
+import GithubIcon from "@astropub/icons/GitHubLogo";
+
+const { href, name, page } = Astro.props;
+const type = name.toLowerCase();
+const isActive = page === type;
+---
+
+<a href={href} class={`${type} link${isActive ? " active" : ""}`}
+  >{name === "GitHub" ? <GithubIcon size="1.5em" /> : name}
+</a>
