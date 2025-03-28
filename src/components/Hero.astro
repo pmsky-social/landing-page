@@ -21,7 +21,7 @@ import HeroImage from "../images/hero.jpeg";
     height: auto;
     width: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .hero picture {
@@ -32,5 +32,10 @@ import HeroImage from "../images/hero.jpeg";
     height: auto;
     border-radius: 10px;
     box-shadow: var(--nc-bg-3) 0 0 7px;
+  }
+  @media screen and (min-width: 750px) {
+    .hero {
+      flex-direction: row;
+    }
   }
 </style>

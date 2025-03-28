@@ -1,16 +1,18 @@
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: auto;
     font-size: 80%;
     background-color: var(--nc-bg-2);
-    padding: 5em;
+    padding: 1em;
     border-radius: 10px 10px 0 0;
     box-shadow: inset var(--nc-bg-3) 0 2px 3px 0;
 }
 
-footer .col {
-    width: 150px;
+footer p {
+    text-align: center;
+    margin: .5em;
 }
 
 footer a {
@@ -21,4 +23,19 @@ footer a:hover {
     color: var(--nc-tx-1);
 }
 
-@media screen and (min-width: 750px) {}
+@media screen and (min-width: 750px) {
+    footer {
+        padding: 5em;
+        flex-direction: row;
+    }
+
+    footer .col {
+        width: 150px;
+    }
+
+    footer p {
+        text-align: left;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
