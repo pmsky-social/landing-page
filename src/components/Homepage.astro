@@ -1,11 +1,94 @@
 ---
+import { Image } from "astro:assets";
 import Hero from "./Hero.astro";
+import bricks from "../images/bricks.png";
+import assemblyLine from "../images/assembly-line.png";
+import brickGraph from "../images/brick graph.png";
 ---
 
 <main class="homepage">
   <Hero />
-  <h2>Mundus Sine Ceasaberus</h2>
+  <div class="row">
+    <div class="col">
+      <h3>Composable Moderation</h3>
+      <Image src={bricks} alt="digital drawing of bricks" />
+      <p>
+        Bluesky has taken a <a
+          href="https://bsky.social/about/blog/03-12-2024-stackable-moderation"
+          >stackable approach to moderation</a
+        >. This means that, in addition to the company's own moderation, anyone
+        can run a labeler and provide an additional layer of protection.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Lowering Barriers</h3>
+      <p>
+        Running your own labeler takes technical expertise. But on <i>PMsky</i>,
+        you can vote on proposals with a tap.
+      </p>
+      <Image
+        src={assemblyLine}
+        alt="digital drawing of three people passing bricks down an assembly line"
+      />
+      <p>
+        <i>PMsky</i> aims to take the concept of composable moderation a step further,
+        allowing anyone to contribute their perspective to be used by those 3rd party
+        labelers. See more on <a
+          href="https://docs.pmsky.social/getting-started/why-peer-moderation"
+          >Why Peer Moderation.</a
+        >
+      </p>
+    </div>
+    <div class="col">
+      <h3>Proposals & Voting</h3>
+      <p>
+        Proposals and votes are published as ATproto records, allowing
+        independent labelers to leverage a wide range of perspectives when
+        deciding which posts to label.
+      </p>
+      <p>
+        On <i>PMsky</i>, anyone can propose a label for a given post, and
+        everyone can vote on those proposals. Labelers then can publish the
+        labels that users propose back to Bluesky.
+        <a href="https://docs.pmsky.social/getting-started/how-it-works"
+          >Learn how it works.</a
+        >
+      </p>
+      <Image
+        src={brickGraph}
+        alt="digital drawing of four bricks with arrows pointing to each other, representing interconnected references in ATprotocol records."
+      />
+    </div>
+    <div class="col">
+      <p>This is the next block.</p>
+    </div>
+  </div>
   <!-- todo: add a few section about the building blocks getting pulled together -->
   <!-- e.g. composable moderation, atproto records, proposals/voting = peer moderation -->
   <!-- end result? -->
 </main>
+
+<style>
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .col {
+    text-align: justify;
+  }
+  img {
+    height: auto;
+  }
+
+  @media screen and (min-width: 750px) {
+    .row {
+      padding: 0 2em;
+      margin: 2em 0;
+    }
+    .col {
+      max-width: 30%;
+    }
+  }
+</style>
