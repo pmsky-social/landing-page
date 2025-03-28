@@ -7,6 +7,7 @@ const { title } = Astro.props;
 const description = "enabling peer moderation on bsky";
 import linkCard from "/src/images/link_card.jpg";
 import "../styles/main.css";
+import PmskyHeader from "../components/PmskyHeader.astro";
 ---
 
 <!doctype html>
@@ -26,6 +27,7 @@ import "../styles/main.css";
     <meta name="twitter:image" content={linkCard.src} />
   </head>
   <body>
+    <PmskyHeader />
     <slot />
   </body>
 </html>

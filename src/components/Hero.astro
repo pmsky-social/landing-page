@@ -1,0 +1,35 @@
+---
+import { Picture } from "astro:assets";
+import HeroImage from "../images/hero.jpeg";
+---
+
+<div class="hero">
+  <Picture
+    src={HeroImage}
+    alt="hero image of starling murmuration.  image by bios48 on stock.adobe.com"
+  />
+  <div class="col">
+    <h1>Participate in the moderation of the atmosphere</h1>
+    <p>The internet was built</p>
+  </div>
+</div>
+
+<style>
+  .hero {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .hero picture {
+    width: 100%;
+    padding-right: 2vw;
+  }
+  .hero img {
+    height: auto;
+    border-radius: 10px;
+  }
+</style>

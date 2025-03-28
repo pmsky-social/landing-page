@@ -1,5 +1,11 @@
+body {
+    max-width: 1200px;
+}
+
 header {
     padding-bottom: 1em;
+    padding-left: max(2em, calc(40vw - 50%));
+    padding-right: max(1em, calc(40vw - 50%));
 }
 
 main {

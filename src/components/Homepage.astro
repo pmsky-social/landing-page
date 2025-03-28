@@ -1,26 +1,8 @@
 ---
-import Card from "./Card.astro";
-import About from "./About.astro";
-import PmskyHeader from "./PmskyHeader.astro";
+import Hero from "./Hero.astro";
 ---
 
-<PmskyHeader />
-
 <main class="homepage">
-  <div id="learnmore">
-    <About />
-  </div>
-  <ul role="list" class="link-card-grid">
-    <Card
-      href="//docs.pmsky.social"
-      title="Learn More"
-      body="Read the docs for PMsky."
-    />
-    <!-- href="//app.pmsky.social" -->
-    <Card
-      href="https://app.pmsky.social"
-      title="Check out the app!"
-      body="Still in beta; request access!"
-    />
-  </ul>
+  <Hero />
+  <h2>Mundus Sine Ceasaberus</h2>
 </main>
