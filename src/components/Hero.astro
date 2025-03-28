@@ -7,6 +7,7 @@ import HeroImage from "../images/hero.jpeg";
   <Picture
     src={HeroImage}
     alt="hero image of starling murmuration.  image by bios48 on stock.adobe.com"
+    onload="this.style.opacity = 1"
   />
   <div class="col">
     <h1>Participatory moderation in the atmosphere</h1>
@@ -39,12 +40,18 @@ import HeroImage from "../images/hero.jpeg";
 
   .hero picture {
     width: 100%;
-    padding-right: 2vw;
+    margin-right: 2vw;
+    background: url("data:image/bmp;base64,Qk32BAAAAAAAADYAAAAoAAAACAAAAAgAAAABABgAAAAAAMAAAAATCwAAEwsAAAAAAAAAAAAAw9Lnvs7itMXZr8HTtMXWu8vdvs7hvMzhydbpxNLkuMfZssHRtcTTvMvawM7fv83g0t3rzdjmwc3aucXRusfRwc3XxdDdxdDf3eTs2ODnztbcxs/Tx8/TzNTYz9fdz9ff5+zt5Onp3eLg2N3Z2N3Z2+Dc3eLg3OHh8PPs7vHq6+7k6ezh6u3h6+7j6u3k6Ovk9vfs9ffq9fbo9ffn9vjn9/jo9Pbo8fPm+Pnr+Pnr+Pnp+fvp+/zq+/zq+Pnp9PXn")
+      center center / cover no-repeat;
+    border-radius: 10px;
   }
   .hero img {
+    margin: 0;
     height: auto;
     border-radius: 10px;
     box-shadow: var(--nc-bg-3) 0 0 7px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
   .hero h1 {
     font-size: 2rem;
