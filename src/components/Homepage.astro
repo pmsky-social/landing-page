@@ -59,13 +59,42 @@ import brickGraph from "../images/brick graph.png";
         alt="digital drawing of four bricks with arrows pointing to each other, representing interconnected references in ATprotocol records."
       />
     </div>
+    <div class="col sep"></div>
     <div class="col">
-      <p>This is the next block.</p>
+      <h3>Participate now!</h3>
+      <p>
+        The platform is currently live. You can propose labels and vote as soon
+        as you're whitelisted. <a
+          href="https://docs.pmsky.social/getting-started/request-access"
+          >Learn how to request access</a
+        >.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Learn more & Shape the Platform</h3>
+      <p>
+        Dive into the <a href="//docs.pmsky.social">documentation</a> to learn more
+        about PMsky.
+      </p>
+      <p>
+        <a href="https://docs.pmsky.social/getting-started/provide-feedback"
+          >Reach out</a
+        > with any thoughts, questions, or suggestions to help shape the future of
+        the platform.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Get Involved</h3>
+      <p>
+        The PMsky <a href="https://docs.pmsky.social/tech/lexicon">lexicon</a> has
+        been published and records can be consumed from the firehose.
+      </p>
+      <p>
+        Developers wanting to incorporate this data into feeds and labelers are
+        encouraged to reach out directly!
+      </p>
     </div>
   </div>
-  <!-- todo: add a few section about the building blocks getting pulled together -->
-  <!-- e.g. composable moderation, atproto records, proposals/voting = peer moderation -->
-  <!-- end result? -->
 </main>
 
 <style>
@@ -78,6 +107,12 @@ import brickGraph from "../images/brick graph.png";
   .col {
     text-align: justify;
   }
+  .col.sep {
+    width: 100%;
+    border: 1px solid var(--nc-bg-3);
+    margin-bottom: 1em;
+    border-radius: 3px;
+  }
   img {
     height: auto;
   }
@@ -89,6 +124,9 @@ import brickGraph from "../images/brick graph.png";
     }
     .col {
       max-width: 30%;
+    }
+    .col.sep {
+      max-width: 100%;
     }
   }
 </style>
