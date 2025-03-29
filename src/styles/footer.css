@@ -13,6 +13,11 @@ footer {
 footer p {
     text-align: center;
     margin: .5em;
+    align-content: center;
+}
+
+footer p.icons {
+    margin-bottom: 0;
 }
 
 footer a {
@@ -21,6 +26,13 @@ footer a {
 
 footer a:hover {
     color: var(--nc-tx-1);
+}
+
+footer img,
+footer svg {
+    width: 28px;
+    height: auto;
+    margin: 3px;
 }
 
 @media screen and (min-width: 750px) {

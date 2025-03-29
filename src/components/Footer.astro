@@ -1,19 +1,25 @@
 ---
 import "../styles/footer.css";
+import BskyIcon from "./BskyIcon.astro";
+import GithubIcon from "@astropub/icons/GitHubLogo";
 ---
 
 <footer>
   <div class="col">
+    <p class="icons">
+      <a href="//bsky.app/profile/pmsky.social"><BskyIcon /></a>
+      <a href="//github.com/pmsky-social"
+        ><GithubIcon width="28px" height="28px" /></a
+      >
+    </p>
     <p><a href="/">Home</a></p>
-    <p><a href="//bsky.app/profile/pmsky.social">@pmsky.social on Bsky</a></p>
   </div>
   <div class="col">
     <p><a href="/about">About</a></p>
     <p><a href="/blog">Blog</a></p>
-    <p><a href="//docs.pmsky.social">Documentation</a></p>
   </div>
   <div class="col">
     <p><a href="//app.pmsky.social">App</a></p>
-    <p><a href="//github.com/pmsky-social">GitHub</a></p>
+    <p><a href="//docs.pmsky.social">Documentation</a></p>
   </div>
 </footer>
