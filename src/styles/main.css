@@ -29,6 +29,10 @@ main {
     .blue {
         color: #7cb8ff;
     }
+
+    img.invertable {
+        filter: invert(.95);
+    }
 }
 
 .link-card-grid {
